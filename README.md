@@ -15,3 +15,15 @@ The first release includes the following features:
   - Kaldi drop-in replacement decoder
   - Cascade construction and experimental pipeline built around Unix make
   - Post-processing tools
+
+
+Decoder:
+
+Cascde construction:
+
+Results post-processing:
+
+  - farfilter
+  - latticetofar
+  - fartolattice
+  
