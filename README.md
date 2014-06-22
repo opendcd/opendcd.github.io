@@ -1,2 +1,2 @@
-OpenDcd - A Weighted Finite State Transducer based Speech Recognition Decoder
+OpenDCD - An Open Source WFST based Speech Recognition Decoder
 =================
