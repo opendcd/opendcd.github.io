@@ -27,3 +27,7 @@ Results post-processing:
   - latticetofar
   - fartolattice
   
+##Authors
+
+ - Paul R. Dixon
+ - Josef Novak
