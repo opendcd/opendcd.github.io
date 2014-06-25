@@ -23,9 +23,9 @@ Cascde construction:
 
 Results post-processing:
 
-  - farfilter
-  - latticetofar
-  - fartolattice
+  - ``farfilter``
+  - ``latticetofar``
+  - ``fartolattice``
   
 ##Authors
 
