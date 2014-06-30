@@ -29,7 +29,11 @@
 <p>OpenDcd is a collection or tools for speech recognition decoding, cascade construction,
 model conversion and results post-processing.</p>
 
-<div class="highlight highlight-bash"><pre>  git clone https://github.com/opendcd/opendcd.git
+<div class="highlight highlight-bash"><pre>    git clone https://github.com/opendcd/opendcd.git
+</pre></div>
+
+<div class="highlight highlight-bash"><pre>    <span class="nb">cd </span>src/bin
+    make
 </pre></div>
 
 <p>The first release includes the following features:</p>
@@ -41,14 +45,32 @@ model conversion and results post-processing.</p>
 <li>Post-processing tools</li>
 </ul><p>Decoder:</p>
 
-<p>Cascde construction:</p>
+<ul>
+<li>Direct decoding on different weight semiring</li>
+<li>On-the-fly decoding using lookahead composition</li>
+<li>Lattice generation </li>
+<li>Switchable STL implementations. Use different implementations such EASTL or RDESTL, or mix optimized containers such as Google sparse hash.</li>
+</ul><p>Cascde construction:</p>
+
+<ul>
+<li>Experimental framework built around Gnu make</li>
+</ul><p>Kaldi Compat</p>
 
 <p>Results post-processing:</p>
 
 <ul>
-<li><code>farfilter</code></li>
-<li><code>latticetofar</code></li>
-<li><code>fartolattice</code></li>
+<li>
+<code>farfilter</code> Apply the command to every in FST in the FAR archive</li>
+<li>
+<code>latticetofar</code> Convert Kaldi Table to OpenFst FAR archive</li>
+<li>
+<code>fartolattice</code> Convert an OpenFst FAR archive to Kaldi Table</li>
+</ul><h2>
+<a name="authors" class="anchor" href="#authors"><span class="octicon octicon-link"></span></a>Authors</h2>
+
+<ul>
+<li>Paul R. Dixon</li>
+<li>Josef Novak</li>
 </ul>
       </section>
       <footer>
