@@ -18,9 +18,13 @@ The first release includes the following features:
 
 
 Decoder:
+  - Direct decoding on different weight semiring
+  - Lattice generation 
+
 
 Cascde construction:
-
+  - Experimental framework built around Gnu make
+  
 Results post-processing:
 
   - ``farfilter``
