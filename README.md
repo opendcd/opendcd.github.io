@@ -3,7 +3,14 @@ OpenDcd - An Open Source WFST based Speech Recognition Decoder
 
 
 OpenDcd is a collection or tools for speech recognition decoding, cascade construction,
-model conversion and results post-processing.
+model conversion and results post-processing. The toolkit makes used of OpenFst for representing and 
+manipulating the models. The toolkit was developed by members of Yandex. It is distributed as an open source project with an Apache Licence.
+
+Main documentation site:
+
+
+Quick Installation Guide
+-------------------------
 
 ````bash
     git clone https://github.com/opendcd/opendcd.git
@@ -13,7 +20,6 @@ model conversion and results post-processing.
     cd src/bin
     make
 ````
-
 
 The first release includes the following features:
 
@@ -33,7 +39,7 @@ Cascde construction:
 
   - Experimental framework built around Gnu make
 
-Kaldi Compat
+Kaldi Interoperability:
   
 Results post-processing:
 
