@@ -1,12 +1,8 @@
 OpenDcd - An Open Source WFST based Speech Recognition Decoder
 =================
 
-
 OpenDcd is a collection or tools for speech recognition decoding, cascade construction,
-model conversion and results post-processing. The toolkit makes used of OpenFst for representing and 
-manipulating the models. The toolkit was developed by members of Yandex. It is distributed as an open source project with an Apache Licence.
-
-Main documentation site:
+model conversion and results post-processing. The toolkit makes used of [OpenFst](http://openfst.org/) for representing and manipulating the models. The toolkit was developed by members of [Yandex](http://yandex.com/). It is distributed as an open source project with an Apache Licence. For more information see the [main documentation site](https://github.com/opendcd/opendcd.github.io/wiki)
 
 
 Quick Installation Guide
@@ -21,10 +17,15 @@ Quick Installation Guide
     make
 ````
 
+See egs directory for an example showing how to convert a Kaldi WSJ setup
+
+Brief Overview
+---------------
+
 The first release includes the following features:
 
   - Standalone lightweight decoder core
-  - Kaldi drop-in replacement decoder
+  - Kaldi file format compatible
   - Cascade construction and experimental pipeline built around Unix make
   - Post-processing tools
 
@@ -39,15 +40,13 @@ Cascde construction:
 
   - Experimental framework built around Gnu make
 
-Kaldi Interoperability:
   
 Results post-processing:
 
   - ``farfilter`` Apply the command to every in FST in the FAR archive
   - ``latticetofar`` Convert Kaldi Table to OpenFst FAR archive
   - ``fartolattice`` Convert an OpenFst FAR archive to Kaldi Table
-  
-##Authors
 
- - Paul R. Dixon
- - Josef Novak
+Kaldi Interoperability:
+
+  - Write results in Kaldi `Lattice`tables
