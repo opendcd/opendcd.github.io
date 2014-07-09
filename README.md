@@ -49,4 +49,4 @@ Results post-processing:
 
 Kaldi Interoperability:
 
-  - Write results in Kaldi `Lattice`tables
+  - Write results in Kaldi *Lattice* table format
