@@ -16,7 +16,7 @@
     <div class="wrapper">
       <header>
         <h1>OpenDcd</h1>
-        <p>An Open Source WFST based Speech Recognition Decode</p>
+        <p>An Open Source WFST based Speech Recognition Decoder</p>
 
 
         <p class="view"><a href="https://github.com/opendcd">View My GitHub Profile</a></p>
@@ -27,7 +27,10 @@
 <a name="opendcd---an-open-source-wfst-based-speech-recognition-decoder" class="anchor" href="#opendcd---an-open-source-wfst-based-speech-recognition-decoder"><span class="octicon octicon-link"></span></a>OpenDcd - An Open Source WFST based Speech Recognition Decoder</h1>
 
 <p>OpenDcd is a collection or tools for speech recognition decoding, cascade construction,
-model conversion and results post-processing.</p>
+model conversion and results post-processing. The toolkit makes used of <a href="http://openfst.org/">OpenFst</a> for representing and manipulating the models. The toolkit was developed by members of <a href="http://yandex.com/">Yandex</a>. It is distributed as an open source project with an Apache Licence. For more information see the <a href="https://github.com/opendcd/opendcd.github.io/wiki">main documentation site</a></p>
+
+<h2>
+<a name="quick-installation-guide" class="anchor" href="#quick-installation-guide"><span class="octicon octicon-link"></span></a>Quick Installation Guide</h2>
 
 <div class="highlight highlight-bash"><pre>    git clone https://github.com/opendcd/opendcd.git
 </pre></div>
@@ -36,11 +39,16 @@ model conversion and results post-processing.</p>
     make
 </pre></div>
 
+<p>See egs directory for an example showing how to convert a Kaldi WSJ setup</p>
+
+<h2>
+<a name="brief-overview" class="anchor" href="#brief-overview"><span class="octicon octicon-link"></span></a>Brief Overview</h2>
+
 <p>The first release includes the following features:</p>
 
 <ul>
 <li>Standalone lightweight decoder core</li>
-<li>Kaldi drop-in replacement decoder</li>
+<li>Kaldi file format compatible</li>
 <li>Cascade construction and experimental pipeline built around Unix make</li>
 <li>Post-processing tools</li>
 </ul><p>Decoder:</p>
@@ -54,9 +62,7 @@ model conversion and results post-processing.</p>
 
 <ul>
 <li>Experimental framework built around Gnu make</li>
-</ul><p>Kaldi Compat</p>
-
-<p>Results post-processing:</p>
+</ul><p>Results post-processing:</p>
 
 <ul>
 <li>
@@ -65,12 +71,10 @@ model conversion and results post-processing.</p>
 <code>latticetofar</code> Convert Kaldi Table to OpenFst FAR archive</li>
 <li>
 <code>fartolattice</code> Convert an OpenFst FAR archive to Kaldi Table</li>
-</ul><h2>
-<a name="authors" class="anchor" href="#authors"><span class="octicon octicon-link"></span></a>Authors</h2>
+</ul><p>Kaldi Interoperability:</p>
 
 <ul>
-<li>Paul R. Dixon</li>
-<li>Josef Novak</li>
+<li>Write results in Kaldi <em>Lattice</em> table format</li>
 </ul>
       </section>
       <footer>
