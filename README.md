@@ -31,6 +31,7 @@ The first release includes the following features:
 
 Decoder:
 
+  - Customizable transition model for custom user and transition models
   - Direct decoding on different weight semiring
   - On-the-fly decoding using lookahead composition
   - Lattice generation 
@@ -39,7 +40,6 @@ Decoder:
 Cascde construction:
 
   - Experimental framework built around Gnu make
-
   
 Results post-processing:
 
