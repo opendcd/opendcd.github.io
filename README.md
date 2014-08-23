@@ -50,3 +50,7 @@ Results post-processing:
 Kaldi Interoperability:
 
   - Write results in Kaldi *Lattice* table format
+
+More Information
+
+  - Ongoing introdcution slides can be found [here](https://dl.dropboxusercontent.com/u/321851/opendcd.pdf). These are updated frequently. 
