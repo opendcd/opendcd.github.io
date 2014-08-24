@@ -1,33 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>OpenDcd by opendcd</title>
+    <meta name="description" content="OpenDcd : An Open Source WFST based Speech Recognition Decoder">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>OpenDcd</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>OpenDcd</h1>
-        <p>An Open Source WFST based Speech Recognition Decoder</p>
 
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/opendcd">View on GitHub</a>
 
-        <p class="view"><a href="https://github.com/opendcd">View My GitHub Profile</a></p>
+          <h1 id="project_title">OpenDcd</h1>
+          <h2 id="project_tagline">An Open Source WFST based Speech Recognition Decoder</h2>
 
-      </header>
-      <section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>
 <a name="opendcd---an-open-source-wfst-based-speech-recognition-decoder" class="anchor" href="#opendcd---an-open-source-wfst-based-speech-recognition-decoder"><span class="octicon octicon-link"></span></a>OpenDcd - An Open Source WFST based Speech Recognition Decoder</h1>
 
-<p>OpenDcd is a collection or tools for speech recognition decoding, cascade construction,
-model conversion and results post-processing. The toolkit makes used of <a href="http://openfst.org/">OpenFst</a> for representing and manipulating the models. The toolkit was developed by members of <a href="http://yandex.com/">Yandex</a>. It is distributed as an open source project with an Apache Licence. For more information see the <a href="https://github.com/opendcd/opendcd.github.io/wiki">main documentation site</a></p>
+<p>OpenDcd a lightweight and portable WFST based speech decoding toolkit written in C++. OpenDcd provides a set of tools for decoding, cascade construction and hypothesis post- processing. The focus of the toolkit is to provide a foundation for research into new decoding methods that can be deployed. Through the use of C++ templates the core decoder can be configured and extended in many ways. For example selecting different on-the-fly composition or lattice generation strategies. The core engine has detailed profiling, logging and analysis methods that make it highly for deployement in production systems.</p>
+
+<p>The toolkit makes used of <a href="http://openfst.org/">OpenFst</a> for representing and manipulating the models. The toolkit was developed by members of <a href="http://yandex.com/">Yandex</a>. It is distributed as an open source project with an Apache Licence. For more information see the <a href="https://github.com/opendcd/opendcd.github.io/wiki">main documentation site</a></p>
 
 <h2>
 <a name="quick-installation-guide" class="anchor" href="#quick-installation-guide"><span class="octicon octicon-link"></span></a>Quick Installation Guide</h2>
@@ -54,6 +59,7 @@ model conversion and results post-processing. The toolkit makes used of <a href=
 </ul><p>Decoder:</p>
 
 <ul>
+<li>Customizable transition model for custom user and transition models</li>
 <li>Direct decoding on different weight semiring</li>
 <li>On-the-fly decoding using lookahead composition</li>
 <li>Lattice generation </li>
@@ -75,13 +81,21 @@ model conversion and results post-processing. The toolkit makes used of <a href=
 
 <ul>
 <li>Write results in Kaldi <em>Lattice</em> table format</li>
+</ul><p>More Information</p>
+
+<ul>
+<li>Ongoing introdcution slides can be found <a href="https://dl.dropboxusercontent.com/u/321851/opendcd.pdf">here</a>. These are updated frequently. </li>
 </ul>
       </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -92,6 +106,7 @@ model conversion and results post-processing. The toolkit makes used of <a href=
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
+
 
   </body>
 </html>
