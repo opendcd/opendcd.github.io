@@ -18,7 +18,28 @@ Quick Installation Guide
     make
 ````
 
-See egs directory for an example showing how to convert a Kaldi WSJ setup
+Kaldi Conversion Quick Start
+-------------------------------
+
+For Kaldi model converion and decoding a working Kaldi installation and 
+set of acoustic and language models and features from generated from a Kaldi egs/s5 
+script are required. The following example is based on the output of Kaldi WSJ training run.
+
+Graph construction, the scripts directory contains 
+The Kaldi language directory, we re-use the existing Kaldi lexicon and LM.
+
+````bash
+    cd $OPENDCD/scripts
+    export KALDI_ROOT=/home/opendcd/tools/kaldi-trunk
+    ./makeclevel.sh \
+    $KALDI_ROOT/egs/wsj/s5/data/lang_test_bg_5k \
+    $KALDI_ROOT/egs/wsj/s5/exp/tri2a \
+    $KALDI_ROOT/egs/wsj/s5/exp/ocd_tri2a \
+    $KALDI_ROOT
+````
+
+
+See egs directory contains example script for showing how to convert a Kaldi WSJ setup
 
 Brief Overview
 ---------------
