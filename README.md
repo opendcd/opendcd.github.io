@@ -1,9 +1,9 @@
 OpenDcd - An Open Source WFST based Speech Recognition Decoder
 =================
 
-OpenDcd a lightweight and portable WFST based speech decoding toolkit written in C++. OpenDcd provides a set of tools for decoding, cascade construction and hypothesis post- processing. The focus of the toolkit is to provide a foundation for research into new decoding methods that can be deployed. Through the use of C++ templates the core decoder can be configured and extended in many ways. For example selecting different on-the-fly composition or lattice generation strategies. The core engine has detailed profiling, logging and analysis methods that make it highly for deployement in production systems.
+OpenDcd a lightweight and portable WFST based speech decoding toolkit written in C++. OpenDcd provides a set of tools for decoding, cascade construction and hypothesis post- processing. The focus of the toolkit is to provide a foundation for research into new decoding methods that can be deployed. Through the use of C++ templates the core decoder can be configured and extended in many ways. For example selecting different on-the-fly composition or lattice generation strategies. The core engine has detailed profiling, logging and analysis methods that make it highly for deployement in production systems. The toolkit makes used of [OpenFst](http://openfst.org/) for representing and manipulating the models. It is distributed as an open source project with an Apache Licence. 
 
-The toolkit makes used of [OpenFst](http://openfst.org/) for representing and manipulating the models. The toolkit was developed by members of [Yandex](http://yandex.com/). It is distributed as an open source project with an Apache Licence. For more information see the [main documentation site](https://github.com/opendcd/opendcd.github.io/wiki)
+For more information see the [main documentation site](https://github.com/opendcd/opendcd.github.io/wiki), and the tutorial for installing the OpenDcd and decoding using the Librispeech corpus and models from kaldi-asr.og.
 
 
 Quick Installation Guide
@@ -75,4 +75,4 @@ Kaldi Interoperability:
 
 More Information
 
-  - Ongoing introdcution slides can be found [here](https://dl.dropboxusercontent.com/u/321851/opendcd.pdf). These are updated frequently. 
+  - Ongoing introdutory slides can be found [here](https://dl.dropboxusercontent.com/u/321851/opendcd.pdf). These are updated frequently. 
