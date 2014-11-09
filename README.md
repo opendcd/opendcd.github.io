@@ -72,7 +72,8 @@ Results post-processing:
 Kaldi Interoperability:
 
   - Write results in Kaldi *Lattice* table format
+  - [More information](https://github.com/opendcd/opendcd.github.io/wiki/Kaldi-Interoperability) on optionally building against Kaldi 
 
 More Information
-
-  - Ongoing introdutory slides can be found [here](https://dl.dropboxusercontent.com/u/321851/opendcd.pdf). These are updated frequently. 
+  - A [https://github.com/opendcd/opendcd.github.io/wiki/EC2-Installation-Walkthrough](getting start guide) for running OpenDcd on Ec2 using the Librispeech models
+  - Ongoing introdutory slides can be found [here](https://dl.dropboxusercontent.com/u/321851/opendcd.pdf). These are updated infrequently. 
