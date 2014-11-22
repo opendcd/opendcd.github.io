@@ -28,26 +28,24 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>
-<a name="opendcd---an-open-source-wfst-based-speech-recognition-decoder" class="anchor" href="#opendcd---an-open-source-wfst-based-speech-recognition-decoder"><span class="octicon octicon-link"></span></a>OpenDcd - An Open Source WFST based Speech Recognition Decoder</h1>
+<a id="opendcd---an-open-source-wfst-based-speech-recognition-decoder" class="anchor" href="#opendcd---an-open-source-wfst-based-speech-recognition-decoder" aria-hidden="true"><span class="octicon octicon-link"></span></a>OpenDcd - An Open Source WFST based Speech Recognition Decoder</h1>
 
 <p>OpenDcd a lightweight and portable WFST based speech decoding toolkit written in C++. OpenDcd provides a set of tools for decoding, cascade construction and hypothesis post- processing. The focus of the toolkit is to provide a foundation for research into new decoding methods that can be deployed. Through the use of C++ templates the core decoder can be configured and extended in many ways. For example selecting different on-the-fly composition or lattice generation strategies. The core engine has detailed profiling, logging and analysis methods that make it highly for deployement in production systems.</p>
 
 <p>The toolkit makes used of <a href="http://openfst.org/">OpenFst</a> for representing and manipulating the models. The toolkit was developed by members of <a href="http://yandex.com/">Yandex</a>. It is distributed as an open source project with an Apache Licence. For more information see the <a href="https://github.com/opendcd/opendcd.github.io/wiki">main documentation site</a></p>
 
 <h2>
-<a name="quick-installation-guide" class="anchor" href="#quick-installation-guide"><span class="octicon octicon-link"></span></a>Quick Installation Guide</h2>
+<a id="quick-installation-guide" class="anchor" href="#quick-installation-guide" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quick Installation Guide</h2>
 
-<div class="highlight highlight-bash"><pre>    git clone https://github.com/opendcd/opendcd.git
-</pre></div>
+<div class="highlight highlight-bash"><pre>    git clone https://github.com/opendcd/opendcd.git</pre></div>
 
-<div class="highlight highlight-bash"><pre>    <span class="nb">cd </span>src/bin
-    make
-</pre></div>
+<div class="highlight highlight-bash"><pre>    <span class="pl-s3">cd</span> src/bin
+    make</pre></div>
 
 <p>See egs directory for an example showing how to convert a Kaldi WSJ setup</p>
 
 <h2>
-<a name="brief-overview" class="anchor" href="#brief-overview"><span class="octicon octicon-link"></span></a>Brief Overview</h2>
+<a id="brief-overview" class="anchor" href="#brief-overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Brief Overview</h2>
 
 <p>The first release includes the following features:</p>
 
@@ -56,7 +54,9 @@
 <li>Kaldi file format compatible</li>
 <li>Cascade construction and experimental pipeline built around Unix make</li>
 <li>Post-processing tools</li>
-</ul><p>Decoder:</p>
+</ul>
+
+<p>Decoder:</p>
 
 <ul>
 <li>Customizable transition model for custom user and transition models</li>
@@ -64,11 +64,15 @@
 <li>On-the-fly decoding using lookahead composition</li>
 <li>Lattice generation </li>
 <li>Switchable STL implementations. Use different implementations such EASTL or RDESTL, or mix optimized containers such as Google sparse hash.</li>
-</ul><p>Cascde construction:</p>
+</ul>
+
+<p>Cascde construction:</p>
 
 <ul>
 <li>Experimental framework built around Gnu make</li>
-</ul><p>Results post-processing:</p>
+</ul>
+
+<p>Results post-processing:</p>
 
 <ul>
 <li>
@@ -77,11 +81,15 @@
 <code>latticetofar</code> Convert Kaldi Table to OpenFst FAR archive</li>
 <li>
 <code>fartolattice</code> Convert an OpenFst FAR archive to Kaldi Table</li>
-</ul><p>Kaldi Interoperability:</p>
+</ul>
+
+<p>Kaldi Interoperability:</p>
 
 <ul>
 <li>Write results in Kaldi <em>Lattice</em> table format</li>
-</ul><p>More Information</p>
+</ul>
+
+<p>More Information</p>
 
 <ul>
 <li>Ongoing introdcution slides can be found <a href="https://dl.dropboxusercontent.com/u/321851/opendcd.pdf">here</a>. These are updated frequently. </li>
