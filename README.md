@@ -47,9 +47,9 @@ Brief Overview
 The first release includes the following features:
 
   - Standalone lightweight decoder core
-  - Kaldi file format compatible
-  - Cascade construction and experimental pipeline built around Unix make
+  - Kaldi file format compatible or ptionally build against Kaldi
   - Post-processing tools
+  - OpenFst and Kaldi Interop Tools
 
 Decoder:
 
@@ -58,10 +58,11 @@ Decoder:
   - On-the-fly decoding using lookahead composition
   - Lattice generation 
   - Switchable STL implementations. Use different implementations such EASTL or RDESTL, or mix optimized containers such as Google sparse hash.
+  - Powerful registration mechanism for adding user defined acoustic models and or lattice generation strategies
 
 Cascde construction:
 
-  - Experimental framework built around Gnu make
+  - Script to efficiently build and convert models from a Kaldi lang directory
   
 Results post-processing:
 
@@ -73,6 +74,7 @@ Kaldi Interoperability:
 
   - Write results in Kaldi *Lattice* table format
   - [More information](https://github.com/opendcd/opendcd.github.io/wiki/Kaldi-Interoperability) on optionally building against Kaldi 
+  - Convert Kaldi tree to optimized decoding structure
 
 More Information
   - A [getting start guide](https://github.com/opendcd/opendcd.github.io/wiki/EC2-Installation-Walkthrough) for running OpenDcd on Ec2 using the Librispeech models
