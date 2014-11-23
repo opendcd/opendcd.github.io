@@ -30,9 +30,9 @@
         <h1>
 <a id="opendcd---an-open-source-wfst-based-speech-recognition-decoder" class="anchor" href="#opendcd---an-open-source-wfst-based-speech-recognition-decoder" aria-hidden="true"><span class="octicon octicon-link"></span></a>OpenDcd - An Open Source WFST based Speech Recognition Decoder</h1>
 
-<p>OpenDcd a lightweight and portable WFST based speech decoding toolkit written in C++. OpenDcd provides a set of tools for decoding, cascade construction and hypothesis post- processing. The focus of the toolkit is to provide a foundation for research into new decoding methods that can be deployed. Through the use of C++ templates the core decoder can be configured and extended in many ways. For example selecting different on-the-fly composition or lattice generation strategies. The core engine has detailed profiling, logging and analysis methods that make it highly for deployement in production systems.</p>
+<p>OpenDcd a lightweight and portable WFST based speech decoding toolkit written in C++. OpenDcd provides a set of tools for decoding, cascade construction and hypothesis post- processing. The focus of the toolkit is to provide a foundation for research into new decoding methods that can be deployed. Through the use of C++ templates the core decoder can be configured and extended in many ways. For example selecting different on-the-fly composition or lattice generation strategies. The core engine has detailed profiling, logging and analysis methods that make it highly for deployement in production systems. The toolkit makes used of <a href="http://openfst.org/">OpenFst</a> for representing and manipulating the models. It is distributed as an open source project with an Apache Licence. </p>
 
-<p>The toolkit makes used of <a href="http://openfst.org/">OpenFst</a> for representing and manipulating the models. The toolkit was developed by members of <a href="http://yandex.com/">Yandex</a>. It is distributed as an open source project with an Apache Licence. For more information see the <a href="https://github.com/opendcd/opendcd.github.io/wiki">main documentation site</a></p>
+<p>For more information see the <a href="https://github.com/opendcd/opendcd.github.io/wiki">main documentation site</a>, and the tutorial for installing the OpenDcd and decoding using the Librispeech corpus and models from kaldi-asr.og.</p>
 
 <h2>
 <a id="quick-installation-guide" class="anchor" href="#quick-installation-guide" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quick Installation Guide</h2>
@@ -42,7 +42,25 @@
 <div class="highlight highlight-bash"><pre>    <span class="pl-s3">cd</span> src/bin
     make</pre></div>
 
-<p>See egs directory for an example showing how to convert a Kaldi WSJ setup</p>
+<h2>
+<a id="kaldi-conversion-quick-start" class="anchor" href="#kaldi-conversion-quick-start" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kaldi Conversion Quick Start</h2>
+
+<p>For Kaldi model converion and decoding a working Kaldi installation and 
+set of acoustic and language models and features from generated from a Kaldi egs/s5 
+script are required. The following example is based on the output of Kaldi WSJ training run.</p>
+
+<p>Graph construction, the scripts directory contains 
+The Kaldi language directory, we re-use the existing Kaldi lexicon and LM.</p>
+
+<div class="highlight highlight-bash"><pre>    <span class="pl-s3">cd</span> <span class="pl-vo">$OPENDCD</span>/scripts
+    <span class="pl-s">export</span> KALDI_ROOT=/home/opendcd/tools/kaldi-trunk
+    ./makeclevel.sh \
+    <span class="pl-vo">$KALDI_ROOT</span>/egs/wsj/s5/data/lang_test_bg_5k \
+    <span class="pl-vo">$KALDI_ROOT</span>/egs/wsj/s5/exp/tri2a \
+    <span class="pl-vo">$KALDI_ROOT</span>/egs/wsj/s5/exp/ocd_tri2a \
+    <span class="pl-vo">$KALDI_ROOT</span></pre></div>
+
+<p>See egs directory contains example script for showing how to convert a Kaldi WSJ setup</p>
 
 <h2>
 <a id="brief-overview" class="anchor" href="#brief-overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Brief Overview</h2>
@@ -51,9 +69,9 @@
 
 <ul>
 <li>Standalone lightweight decoder core</li>
-<li>Kaldi file format compatible</li>
-<li>Cascade construction and experimental pipeline built around Unix make</li>
+<li>Kaldi file format compatible or ptionally build against Kaldi</li>
 <li>Post-processing tools</li>
+<li>OpenFst and Kaldi Interop Tools</li>
 </ul>
 
 <p>Decoder:</p>
@@ -64,12 +82,13 @@
 <li>On-the-fly decoding using lookahead composition</li>
 <li>Lattice generation </li>
 <li>Switchable STL implementations. Use different implementations such EASTL or RDESTL, or mix optimized containers such as Google sparse hash.</li>
+<li>Powerful registration mechanism for adding user defined acoustic models and or lattice generation strategies</li>
 </ul>
 
 <p>Cascde construction:</p>
 
 <ul>
-<li>Experimental framework built around Gnu make</li>
+<li>Script to efficiently build and convert models from a Kaldi lang directory</li>
 </ul>
 
 <p>Results post-processing:</p>
@@ -87,12 +106,16 @@
 
 <ul>
 <li>Write results in Kaldi <em>Lattice</em> table format</li>
+<li>
+<a href="https://github.com/opendcd/opendcd.github.io/wiki/Kaldi-Interoperability">More information</a> on optionally building against Kaldi </li>
+<li>Convert Kaldi tree to optimized decoding structure</li>
 </ul>
 
 <p>More Information</p>
 
 <ul>
-<li>Ongoing introdcution slides can be found <a href="https://dl.dropboxusercontent.com/u/321851/opendcd.pdf">here</a>. These are updated frequently. </li>
+<li>A <a href="https://github.com/opendcd/opendcd.github.io/wiki/EC2-Installation-Walkthrough">getting start guide</a> for running OpenDcd on Ec2 using the Librispeech models</li>
+<li>Ongoing introdutory slides can be found <a href="https://dl.dropboxusercontent.com/u/321851/opendcd.pdf">here</a>. These are updated infrequently. </li>
 </ul>
       </section>
     </div>
